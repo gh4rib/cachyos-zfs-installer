@@ -140,6 +140,13 @@ freshen_system() {
   info "Removing current keyrings"
   rm -rf /etc/pacman.d/gnupg
 
+  if [ "$(
+    wc -c /etc/pacman.d/cachyos-mirrorlist | cut -d ' ' -f 1
+  )" -eq 0 ]; then
+    info "Populating mirror lists with cachyos-rate-mirrors"
+    /usr/bin/cachyos-rate-mirrors
+  fi
+
   info "Re-initializing keyrings"
   pacman -Sy --noconfirm archlinux-keyring cachyos-keyring
   pacman-key --init
