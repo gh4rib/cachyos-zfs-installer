@@ -157,7 +157,7 @@ freshen_system() {
 }
 
 install_calamares_pkgs() {
-  local calamares_pkg="cachyos-calamares-next"
+  local calamares_pkg="cachyos-calamares"
 
   section "Installing calamares package"
 
