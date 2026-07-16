@@ -36,7 +36,7 @@ main() {
   version="0.1.0"
   author="Fletcher Nichol <fnichol@nichol.ca>"
 
-  local repo="fnichol/cachyos-zfs-installer"
+  local repo="gh4rib/cachyos-zfs-installer"
   local branch="main"
   local asset_url="https://github.com/$repo/archive/refs/heads/$branch.tar.gz"
 
